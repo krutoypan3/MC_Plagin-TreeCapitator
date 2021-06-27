@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TreeCapitator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TreeCapitator_jar</output-path>
+    <root id="archive" name="TreeCapitator.jar">
+      <element id="module-output" name="TreeCapitator" />
+    </root>
+  </artifact>
+</component>

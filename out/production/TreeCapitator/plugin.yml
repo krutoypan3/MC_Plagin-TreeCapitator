@@ -1,0 +1,11 @@
+name: TreeCapitator
+version: 1.0
+author: aom13
+api-version: 1.16
+main: me.aom13.treecapitator.Main
+description: Мой плагин для рубки деревьев
+
+commands:
+  hello:
+    aliases: [hi]
+    description: Это комманда приветствия (для проверки кода)
