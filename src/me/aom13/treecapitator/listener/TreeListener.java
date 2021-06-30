@@ -1,7 +1,6 @@
 package me.aom13.treecapitator.listener;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,7 +9,6 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.Damageable;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.material.MaterialData;
 
 public class TreeListener implements Listener {
     public TreeListener() {
@@ -18,13 +16,13 @@ public class TreeListener implements Listener {
 
     private Material LOG_type;
     private ItemStack predmet_in_right_hand;
-    private Player player;
     private Block broken_block;
 
     @EventHandler
     public void onBreak(BlockBreakEvent blockBreakEvent) {
         broken_block =blockBreakEvent.getBlock();
-        player = blockBreakEvent.getPlayer();
+        Player player = blockBreakEvent.getPlayer();
+//        float speed = broken_block.getBreakSpeed(player); // Скорость ломания блока игроком
         predmet_in_right_hand = player.getInventory().getItemInMainHand();
         if (predmet_in_right_hand.getType().equals(Material.DIAMOND_AXE) |
                 predmet_in_right_hand.getType().equals(Material.GOLDEN_AXE) |
